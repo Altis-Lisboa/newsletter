@@ -14,314 +14,209 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { margin: 0; padding: 0; background: #ffffff; }
-    img { border: 0; display: block; max-width: 100%; height: auto; }
+    img { border: 0; display: block; height: auto; }
     a { color: inherit; text-decoration: none; }
-
-    .email-wrapper { width: 100%; background: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-    .container { max-width: 600px; margin: 0 auto; background: #ffffff; }
-
-    .topo-desk { display: block; }
-    .topo-mobile { display: none; }
-
-    .headline-block { padding: 20px 40px 28px; border-bottom: 1px solid #f0f0f0; }
-    .headline-block h1 { font-size: 28px; font-weight: 700; line-height: 1.2; color: #111111; letter-spacing: -0.02em; }
-    .headline-block .subhead { font-size: 15px; color: #555555; margin-top: 10px; line-height: 1.5; font-weight: 400; }
-
-    .section-divider { height: 1px; background: #f0f0f0; margin: 0 40px; }
-
-    .section-label { padding: 32px 40px 4px; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #bbbbbb; font-weight: 600; }
-    .section-title { padding: 0 40px 20px; font-size: 20px; font-weight: 700; color: #111111; letter-spacing: -0.01em; }
-
-    .body-text { padding: 0 40px; font-size: 16px; line-height: 1.75; color: #333333; }
-    .body-text p { margin-bottom: 18px; }
-    .body-text strong { color: #111111; font-weight: 700; }
-    .body-text em { color: #444444; font-style: italic; }
-
-    .stat-block { margin: 28px 40px; padding: 24px 28px; background: #f7f7f7; border-left: 3px solid #111111; }
-    .stat-number { font-size: 42px; font-weight: 800; color: #111111; line-height: 1; letter-spacing: -0.03em; }
-    .stat-label { font-size: 13px; color: #666666; margin-top: 6px; line-height: 1.4; }
-
-    .pull-quote { margin: 28px 40px; padding: 24px 28px; border-top: 2px solid #111111; border-bottom: 2px solid #111111; }
-    .pull-quote p { font-size: 18px; font-weight: 700; line-height: 1.45; color: #111111; letter-spacing: -0.01em; font-style: italic; }
-
-    .callout-box { margin: 28px 40px; padding: 24px 28px; background: #f7f7f7; border-radius: 2px; }
-    .callout-box p { font-size: 15px; line-height: 1.7; color: #333333; }
-
-    .challenge-block { margin: 28px 40px; padding: 22px 26px; background: #111111; border-radius: 2px; }
-    .challenge-block p { font-size: 14px; line-height: 1.7; color: #ffffff; font-style: italic; }
-    .challenge-block strong { font-style: normal; font-weight: 700; }
-
-    .signature { padding: 12px 40px 36px; font-size: 14px; color: #777777; font-style: italic; }
-
-    .big-divider { height: 2px; background: #111111; margin: 8px 40px 0; }
-
-    .nr1-section { padding: 32px 40px 36px; background: #ffffff; }
-    .nr1-title { font-size: 20px; font-weight: 800; color: #111111; margin-bottom: 14px; letter-spacing: -0.01em; }
-    .nr1-body { font-size: 15px; line-height: 1.7; color: #444444; }
-    .nr1-body p { margin-bottom: 14px; }
-    .nr1-body em { font-style: italic; color: #222222; font-weight: 600; }
-    .nr1-cta { display: inline-block; margin-top: 10px; padding: 14px 28px; background: #111111; color: #ffffff !important; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; text-decoration: none; }
-
-    .article-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #aaaaaa; margin-bottom: 8px; }
-    .article-title { font-size: 17px; font-weight: 700; color: #111111; line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em; }
-    .article-body { font-size: 14px; line-height: 1.7; color: #555555; }
-    .article-body p { margin-bottom: 10px; }
-    .article-cta { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 700; color: #111111; letter-spacing: 0.05em; border-bottom: 2px solid #111111; padding-bottom: 2px; text-transform: uppercase; }
-
-    .book-title { font-size: 15px; font-weight: 800; color: #111111; line-height: 1.3; margin-bottom: 6px; }
-    .book-author { font-size: 12px; color: #999999; margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
-    .book-body { font-size: 14px; line-height: 1.65; color: #555555; }
-    .book-body p { margin-bottom: 10px; }
-    .book-body em { font-style: italic; color: #333333; }
-
-    .music-section { padding: 28px 40px 36px; background: #f7f7f7; }
-    .music-section-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #aaaaaa; font-weight: 600; margin-bottom: 12px; }
-    .music-body { font-size: 15px; line-height: 1.7; color: #555555; }
-    .music-body p { margin-bottom: 10px; }
-    .music-body em { font-style: italic; color: #333333; }
-    .music-track { margin-top: 16px; padding: 14px 18px; background: #ffffff; border-radius: 2px; font-size: 14px; font-weight: 700; color: #111111; }
-    .music-track a { color: #111111; text-decoration: underline; }
-    .music-instructions { margin-top: 20px; font-family: 'Special Elite', 'Courier New', Courier, monospace; font-size: 15px; color: #666666; line-height: 2; text-align: center; }
-    .music-instructions p { margin-bottom: 0; }
-
-    .footer { margin-top: 8px; }
-    .footer img { width: 100%; }
-
     @media only screen and (max-width: 600px) {
       .topo-desk { display: none !important; }
       .topo-mobile { display: block !important; }
-
-      .headline-block { padding: 16px 24px 22px; }
-      .headline-block h1 { font-size: 22px; }
-      .headline-block .subhead { font-size: 14px; }
-
-      .section-divider { margin: 0 24px; }
-      .section-label { padding: 24px 24px 4px; }
-      .section-title { padding: 0 24px 16px; font-size: 17px; }
-      .body-text { padding: 0 24px; font-size: 15px; }
-
-      .stat-block { margin: 22px 24px; }
-      .stat-number { font-size: 34px; }
-
-      .pull-quote { margin: 22px 24px; }
-      .pull-quote p { font-size: 16px; }
-
-      .callout-box { margin: 22px 24px; }
-      .challenge-block { margin: 22px 24px; }
-      .signature { padding: 12px 24px 28px; }
-
-      .big-divider { margin: 8px 24px 0; }
-
-      .nr1-section { padding: 24px 24px 28px; }
-
-      /* duas colunas → empilha no mobile */
       .col-table { width: 100% !important; }
-      .col-image td { display: block !important; width: 100% !important; }
-      .col-content td { display: block !important; width: 100% !important; padding: 22px 24px !important; }
-
-      .music-section { padding: 22px 24px 28px; }
+      .col-td { display: block !important; width: 100% !important; }
+      .col-td-content { display: block !important; width: 100% !important; padding: 22px 24px !important; }
     }
   </style>
 </head>
-<body>
-<div class="email-wrapper">
-<div class="container">
+<body style="margin:0; padding:0; background:#ffffff;">
+<div style="width:100%; background:#ffffff; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<div style="max-width:600px; margin:0 auto; background:#ffffff;">
 
   <!-- TOPO -->
-  <div class="topo-desk">
-    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/topo/topo-desk.jpg" alt="The Future Newsletter" width="600">
+  <div class="topo-desk" style="display:block;">
+    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/topo/topo-desk.jpg" alt="The Future Newsletter" width="600" style="display:block; width:100%; height:auto;">
   </div>
-  <div class="topo-mobile">
-    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/topo/topo-mobile.jpg" alt="The Future Newsletter" width="600">
+  <div class="topo-mobile" style="display:none;">
+    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/topo/topo-mobile.jpg" alt="The Future Newsletter" width="600" style="display:block; width:100%; height:auto;">
   </div>
 
   <!-- HEADLINE -->
-  <div class="headline-block">
-    <h1>O mundo está adoecendo.<br>534 mil afastamentos em 2025.</h1>
-    <p class="subhead">O mercado precisa de profissionais preparados para isso.</p>
+  <div style="padding:20px 40px 28px; border-bottom:1px solid #f0f0f0;">
+    <h1 style="font-size:28px; font-weight:700; line-height:1.2; color:#111111; letter-spacing:-0.02em; margin:0;">O mundo está adoecendo.<br>534 mil afastamentos em 2025.</h1>
+    <p style="font-size:15px; color:#555555; margin-top:10px; line-height:1.5; font-weight:400; margin-bottom:0;">O mercado precisa de profissionais preparados para isso.</p>
   </div>
 
   <!-- CARTAS DE LISBOA -->
-  <div class="section-label">🪶 Cartas de Lisboa</div>
-  <div class="section-title">O mundo está adoecendo.</div>
+  <div style="padding:32px 40px 4px; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600;">🪶 Cartas de Lisboa</div>
+  <div style="padding:0 40px 20px; font-size:20px; font-weight:700; color:#111111; letter-spacing:-0.01em;">O mundo está adoecendo.</div>
 
-  <div class="body-text">
-    <p><strong>Em 2025, o Brasil bateu um recorde que ninguém queria bater.</strong></p>
-    <p>534 mil afastamentos do trabalho por transtornos mentais. O maior número da história.</p>
-    <p>E o mundo inteiro está olhando para isso, porque não é um problema brasileiro. É uma crise global. E ela está criando uma demanda que o mercado ainda não sabe preencher.</p>
-    <p>Deixa eu te mostrar alguns números.</p>
+  <div style="padding:0 40px; font-size:16px; line-height:1.75; color:#333333; text-align:left;">
+    <p style="margin-bottom:18px;"><strong style="color:#111111; font-weight:700;">Em 2025, o Brasil bateu um recorde que ninguém queria bater.</strong></p>
+    <p style="margin-bottom:18px;">534 mil afastamentos do trabalho por transtornos mentais. O maior número da história.</p>
+    <p style="margin-bottom:18px;">E o mundo inteiro está olhando para isso, porque não é um problema brasileiro. É uma crise global. E ela está criando uma demanda que o mercado ainda não sabe preencher.</p>
+    <p style="margin-bottom:0;">Deixa eu te mostrar alguns números.</p>
   </div>
 
   <!-- ESTATÍSTICA 1 -->
-  <div class="stat-block">
-    <div class="stat-number">534 mil</div>
-    <div class="stat-label">afastamentos por transtornos<br>mentais em 2025<br>O maior número da história do INSS</div>
+  <div style="margin:28px 40px; padding:24px 28px; background:#f7f7f7; border-left:3px solid #111111;">
+    <div style="font-size:42px; font-weight:800; color:#111111; line-height:1; letter-spacing:-0.03em;">534 mil</div>
+    <div style="font-size:13px; color:#666666; margin-top:6px; line-height:1.4;">afastamentos por transtornos<br>mentais em 2025<br>O maior número da história do INSS</div>
   </div>
 
-  <div class="body-text">
-    <p>Ansiedade lidera: 161 mil casos só no ano passado. É o quinto ano consecutivo de crescimento. E o custo para o país ultrapassou R$ 3,5 bilhões em benefícios pagos.</p>
-    <p>Em dez anos, os afastamentos mais que dobraram. Os casos de ansiedade cresceram mais de 400%. E 64% das pessoas afastadas são mulheres, com idade média de 41 anos, exatamente a faixa que sustenta 49% dos lares brasileiros.</p>
-    <p>Não é coincidência. É um padrão.</p>
-    <p><strong>E esse padrão não é só brasileiro.</strong></p>
+  <div style="padding:0 40px; font-size:16px; line-height:1.75; color:#333333; text-align:left;">
+    <p style="margin-bottom:18px;">Ansiedade lidera: 161 mil casos só no ano passado. É o quinto ano consecutivo de crescimento. E o custo para o país ultrapassou R$ 3,5 bilhões em benefícios pagos.</p>
+    <p style="margin-bottom:18px;">Em dez anos, os afastamentos mais que dobraram. Os casos de ansiedade cresceram mais de 400%. E 64% das pessoas afastadas são mulheres, com idade média de 41 anos, exatamente a faixa que sustenta 49% dos lares brasileiros.</p>
+    <p style="margin-bottom:18px;">Não é coincidência. É um padrão.</p>
+    <p style="margin-bottom:0;"><strong style="color:#111111; font-weight:700;">E esse padrão não é só brasileiro.</strong></p>
   </div>
 
   <!-- ESTATÍSTICA 2 -->
-  <div class="stat-block">
-    <div class="stat-number">1 bilhão</div>
-    <div class="stat-label">de pessoas vivem com algum<br>transtorno mental no mundo.<br>US$ 1 trilhão perdidos por ano<br>em produtividade.</div>
+  <div style="margin:28px 40px; padding:24px 28px; background:#f7f7f7; border-left:3px solid #111111;">
+    <div style="font-size:42px; font-weight:800; color:#111111; line-height:1; letter-spacing:-0.03em;">1 bilhão</div>
+    <div style="font-size:13px; color:#666666; margin-top:6px; line-height:1.4;">de pessoas vivem com algum<br>transtorno mental no mundo.<br>US$ 1 trilhão perdidos por ano<br>em produtividade.</div>
   </div>
 
-  <div class="body-text">
-    <p>São 12 bilhões de dias de trabalho perdidos anualmente. O tema do Dia Mundial da Saúde Mental de 2024 foi, literalmente: <em>"É hora de priorizar a saúde mental no local de trabalho."</em></p>
-    <p>O mundo está enviando um sinal muito claro.</p>
-    <p><strong>Mas eu não quero ficar só nos números. Quero te falar sobre o que eles revelam.</strong></p>
+  <div style="padding:0 40px; font-size:16px; line-height:1.75; color:#333333; text-align:left;">
+    <p style="margin-bottom:18px;">São 12 bilhões de dias de trabalho perdidos anualmente. O tema do Dia Mundial da Saúde Mental de 2024 foi, literalmente: <em style="color:#444444; font-style:italic;">"É hora de priorizar a saúde mental no local de trabalho."</em></p>
+    <p style="margin-bottom:18px;">O mundo está enviando um sinal muito claro.</p>
+    <p style="margin-bottom:0;"><strong style="color:#111111; font-weight:700;">Mas eu não quero ficar só nos números. Quero te falar sobre o que eles revelam.</strong></p>
   </div>
 
   <!-- DUAS COLUNAS: texto + imagem neurônio -->
-  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; margin:28px 0;">
+  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; margin:28px 0; border-collapse:collapse;">
     <tr>
-      <td class="col-content" valign="top" width="330" style="width:330px; padding:28px 32px 28px 40px; background:#ffffff; vertical-align:top;">
-        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px;">Esses 534 mil afastamentos não são estatística. São 534 mil histórias de pessoas que chegaram num ponto em que o corpo disse não, antes que a mente tivesse permissão para dizer.</p>
-        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px;">Pessoas que provavelmente passaram meses, talvez anos, funcionando no limite. Entregando resultado, respondendo e-mail, aparecendo nas reuniões. Mas por dentro, algo estava se fragmentando silenciosamente.</p>
-        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:0;">E isso acontece porque ainda vivemos dentro de uma cultura que confunde produção com valor. Que ensina que pedir ajuda é fraqueza. Que transforma o esgotamento em medalha.</p>
+      <td class="col-td-content" valign="top" width="330" style="width:330px; padding:28px 32px 28px 40px; background:#ffffff; vertical-align:top;">
+        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px; text-align:left;">Esses 534 mil afastamentos não são estatística. São 534 mil histórias de pessoas que chegaram num ponto em que o corpo disse não, antes que a mente tivesse permissão para dizer.</p>
+        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px; text-align:left;">Pessoas que provavelmente passaram meses, talvez anos, funcionando no limite. Entregando resultado, respondendo e-mail, aparecendo nas reuniões. Mas por dentro, algo estava se fragmentando silenciosamente.</p>
+        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:0; text-align:left;">E isso acontece porque ainda vivemos dentro de uma cultura que confunde produção com valor. Que ensina que pedir ajuda é fraqueza. Que transforma o esgotamento em medalha.</p>
       </td>
-      <td class="col-image" valign="top" width="270" style="width:270px; vertical-align:top;">
+      <td class="col-td" valign="top" width="270" style="width:270px; vertical-align:top;">
         <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/como%20o%20corpo%20guarda%20o%20que%20a%20mente%20ainda%20n%C3%A3o%20processou..jpg" alt="Como o corpo guarda o que a mente ainda não processou" width="270" style="display:block; width:100%; height:auto;">
       </td>
     </tr>
   </table>
 
   <!-- PULL QUOTE -->
-  <div class="pull-quote">
-    <p>O problema não é falta de força. É um sistema nervoso que nunca teve permissão para descansar.</p>
+  <div style="margin:28px 40px; padding:24px 28px; border-top:2px solid #111111; border-bottom:2px solid #111111;">
+    <p style="font-size:18px; font-weight:700; line-height:1.45; color:#111111; letter-spacing:-0.01em; font-style:italic; margin:0;">O problema não é falta de força. É um sistema nervoso que nunca teve permissão para descansar.</p>
   </div>
 
-  <div class="body-text">
-    <p>A neurociência já sabe disso há tempo: quando o organismo vive em estado de alerta crônico, ele se reconfigura. Memória, empatia, capacidade de decisão: tudo é afetado. Não é fraqueza. É biologia respondendo a um ambiente que adoece.</p>
-    <p>E é aqui que entra algo que muda o jogo completamente.</p>
-    <p>Em 2025, a NR-1 atualizada entrou em vigor. Pela primeira vez na legislação brasileira, as empresas foram obrigadas a identificar e gerenciar os riscos psicossociais no trabalho. Estresse, esgotamento, assédio, pressão crônica. Tudo isso agora tem peso legal.</p>
-    <p>Mas há uma lacuna enorme entre a lei existir e ela ser implementada com profundidade.</p>
-    <p>A maioria das empresas ainda está correndo atrás de checklist. Porque é mais fácil criar um documento do que formar uma cultura. E quem vai fazer essa travessia, de uma norma no papel para uma mudança real nas organizações, são profissionais que entendem de ser humano de verdade.</p>
-    <p><strong>Esse é o novo mercado que está se abrindo agora.</strong></p>
-    <p>Não para quem aprendeu a norma. Para quem entende o que está por baixo dela.</p>
-    <p>Saúde mental não é mais pauta de RH progressista. É estratégia. É lei. É custo visível no balanço de qualquer empresa que não cuida do seu ambiente.</p>
+  <div style="padding:0 40px; font-size:16px; line-height:1.75; color:#333333; text-align:left;">
+    <p style="margin-bottom:18px;">A neurociência já sabe disso há tempo: quando o organismo vive em estado de alerta crônico, ele se reconfigura. Memória, empatia, capacidade de decisão: tudo é afetado. Não é fraqueza. É biologia respondendo a um ambiente que adoece.</p>
+    <p style="margin-bottom:18px;">E é aqui que entra algo que muda o jogo completamente.</p>
+    <p style="margin-bottom:18px;">Em 2025, a NR-1 atualizada entrou em vigor. Pela primeira vez na legislação brasileira, as empresas foram obrigadas a identificar e gerenciar os riscos psicossociais no trabalho. Estresse, esgotamento, assédio, pressão crônica. Tudo isso agora tem peso legal.</p>
+    <p style="margin-bottom:18px;">Mas há uma lacuna enorme entre a lei existir e ela ser implementada com profundidade.</p>
+    <p style="margin-bottom:18px;">A maioria das empresas ainda está correndo atrás de checklist. Porque é mais fácil criar um documento do que formar uma cultura. E quem vai fazer essa travessia, de uma norma no papel para uma mudança real nas organizações, são profissionais que entendem de ser humano de verdade.</p>
+    <p style="margin-bottom:18px;"><strong style="color:#111111; font-weight:700;">Esse é o novo mercado que está se abrindo agora.</strong></p>
+    <p style="margin-bottom:18px;">Não para quem aprendeu a norma. Para quem entende o que está por baixo dela.</p>
+    <p style="margin-bottom:0;">Saúde mental não é mais pauta de RH progressista. É estratégia. É lei. É custo visível no balanço de qualquer empresa que não cuida do seu ambiente.</p>
   </div>
 
-  <!-- CALL-OUT EDITORIAL -->
-  <div class="callout-box">
-    <p>E o futuro, aquele que o Altis sempre acreditou ser possível, é um futuro onde as organizações são lideradas por pessoas que compreendem que <strong>cuidar de gente é o maior ativo que existe</strong>. Que ambientes saudáveis não são luxo, são resultado. Que consciência e performance não são opostos: são a mesma coisa.</p>
+  <!-- CALL-OUT -->
+  <div style="margin:28px 40px; padding:24px 28px; background:#f7f7f7; border-radius:2px;">
+    <p style="font-size:15px; line-height:1.7; color:#333333; margin:0; text-align:left;">E o futuro, aquele que o Altis sempre acreditou ser possível, é um futuro onde as organizações são lideradas por pessoas que compreendem que <strong style="color:#111111; font-weight:700;">cuidar de gente é o maior ativo que existe</strong>. Que ambientes saudáveis não são luxo, são resultado. Que consciência e performance não são opostos: são a mesma coisa.</p>
   </div>
 
-  <div class="body-text">
-    <p><em>Esse é o novo profissional que o mundo está pedindo. E talvez seja exatamente quem você está se tornando.</em></p>
+  <div style="padding:0 40px; font-size:16px; line-height:1.75; color:#333333; text-align:left;">
+    <p style="margin-bottom:0;"><em style="color:#444444; font-style:italic;">Esse é o novo profissional que o mundo está pedindo. E talvez seja exatamente quem você está se tornando.</em></p>
   </div>
 
   <!-- DESAFIO DA SEMANA -->
-  <div class="challenge-block">
-    <p><strong>Desafio da semana:</strong> observa o ambiente ao teu redor. No trabalho, nas relações, em casa. O que está adoecendo em silêncio? E o que em você ainda está esperando permissão para ser nomeado?</p>
+  <div style="margin:28px 40px; padding:22px 26px; background:#111111; border-radius:2px;">
+    <p style="font-size:14px; line-height:1.7; color:#ffffff; font-style:italic; margin:0; text-align:left;"><strong style="font-style:normal; font-weight:700; color:#ffffff;">Desafio da semana:</strong> observa o ambiente ao teu redor. No trabalho, nas relações, em casa. O que está adoecendo em silêncio? E o que em você ainda está esperando permissão para ser nomeado?</p>
   </div>
 
-  <div class="signature">Com carinho, Ana Lisboa.</div>
+  <div style="padding:12px 40px 36px; font-size:14px; color:#777777; font-style:italic;">Com carinho, Ana Lisboa.</div>
 
-  <div class="big-divider"></div>
+  <div style="height:2px; background:#111111; margin:8px 40px 0;"></div>
 
-  <!-- MULTIVERSO ALTIS — NR-1 -->
-  <div class="nr1-section">
-    <div class="section-label" style="padding: 0 0 16px; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600;">✧ Multiverso Altis</div>
-
-    <div style="text-align:center; padding: 16px 0 24px;">
-      <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/logo-nr1.svg" alt="NR-1 Altis" style="height:120px; width:auto; display:inline-block;">
+  <!-- NR-1 -->
+  <div style="padding:32px 40px 36px; background:#ffffff;">
+    <div style="padding:0 0 16px; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600;">✧ Multiverso Altis</div>
+    <div style="text-align:center; padding:16px 0 24px;">
+      <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/logo-nr1.svg" alt="NR-1 Altis" height="120" style="height:120px; width:auto; display:inline-block;">
     </div>
-
-    <div class="nr1-title">Tá sabendo da oportunidade com a NR-1?</div>
-
-    <div class="nr1-body">
-      <p>Quando a NR-1 foi publicada, a maioria das empresas correu atrás de checklist.</p>
-      <p><em>E o Altis saiu na vanguarda. Enquanto o mercado ainda estava entendendo o que a lei exigia, a gente já estava formando os profissionais que vão implementar isso com a profundidade que o tema exige: visão sistêmica, leitura do ser humano e ferramentas emocionais concretas.</em></p>
-      <p>O resultado é o curso <strong>A nova NR-01</strong>, onde você se torna um implementador de NR-01 e saúde mental organizacional, 100% gravado, com certificação reconhecida pelo MEC. Para você estudar no seu tempo e chegar preparada onde o mercado ainda está engatinhando.</p>
-      <p>Não é sobre aprender uma norma. É sobre se tornar a profissional que sabe transformar conhecimento em impacto real e receita nas empresas, bem como, em uma nova fonte de renda.</p>
-      <a href="https://nr1.altislisboa.com.br/" class="nr1-cta" style="white-space: nowrap;">→ Quero saber mais sobre a Formação</a>
+    <div style="font-size:20px; font-weight:800; color:#111111; margin-bottom:14px; letter-spacing:-0.01em;">Tá sabendo da oportunidade com a NR-1?</div>
+    <div style="font-size:15px; line-height:1.7; color:#444444; text-align:left;">
+      <p style="margin-bottom:14px;">Quando a NR-1 foi publicada, a maioria das empresas correu atrás de checklist.</p>
+      <p style="margin-bottom:14px;"><em style="font-style:italic; color:#222222; font-weight:600;">E o Altis saiu na vanguarda. Enquanto o mercado ainda estava entendendo o que a lei exigia, a gente já estava formando os profissionais que vão implementar isso com a profundidade que o tema exige: visão sistêmica, leitura do ser humano e ferramentas emocionais concretas.</em></p>
+      <p style="margin-bottom:14px;">O resultado é o curso <strong style="font-weight:700;">A nova NR-01</strong>, onde você se torna um implementador de NR-01 e saúde mental organizacional, 100% gravado, com certificação reconhecida pelo MEC. Para você estudar no seu tempo e chegar preparada onde o mercado ainda está engatinhando.</p>
+      <p style="margin-bottom:14px;">Não é sobre aprender uma norma. É sobre se tornar a profissional que sabe transformar conhecimento em impacto real e receita nas empresas, bem como, em uma nova fonte de renda.</p>
+      <a href="https://nr1.altislisboa.com.br/" style="display:inline-block; margin-top:10px; padding:14px 28px; background:#111111; color:#ffffff; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; border-radius:2px; text-decoration:none; white-space:nowrap;">→ Quero saber mais sobre a Formação</a>
     </div>
   </div>
 
-  <div class="section-divider"></div>
+  <div style="height:1px; background:#f0f0f0; margin:0 40px;"></div>
 
   <!-- ARTIGO DA SEMANA -->
-  <div style="padding: 32px 0 0;">
-    <div class="section-label">✍️ Artigo da Semana</div>
+  <div style="padding:32px 0 0;">
+    <div style="padding:0 40px 4px; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600;">✍️ Artigo da Semana</div>
   </div>
 
   <!-- DUAS COLUNAS: foto Shaiane + texto -->
-  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;">
+  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; border-collapse:collapse;">
     <tr>
-      <td class="col-image" valign="top" width="252" style="width:252px; vertical-align:top;">
+      <td class="col-td" valign="top" width="252" style="width:252px; vertical-align:top;">
         <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/shaiane.jpg" alt="Shaiane Porto" width="252" style="display:block; width:100%; height:auto;">
       </td>
-      <td class="col-content" valign="middle" width="348" style="width:348px; padding:28px 32px; background:#f7f7f7; vertical-align:middle;">
-        <div class="article-label">Por Shaiane Porto · Aluna Altis Lisboa</div>
-        <div class="article-title">Do trauma à fluidez: o corpo como portal de autorregulação e reconexão</div>
-        <div class="article-body">
-          <p>Como o corpo guarda o que a mente ainda não processou. O artigo conecta neurociência do trauma, teoria polivagal e visão sistêmica.</p>
-          <p>É o tipo de leitura que muda a forma como você enxerga o seu corpo.</p>
+      <td class="col-td-content" valign="middle" width="348" style="width:348px; padding:28px 32px; background:#f7f7f7; vertical-align:middle;">
+        <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#aaaaaa; margin-bottom:8px;">Por Shaiane Porto · Aluna Altis Lisboa</div>
+        <div style="font-size:17px; font-weight:700; color:#111111; line-height:1.35; margin-bottom:12px; letter-spacing:-0.01em;">Do trauma à fluidez: o corpo como portal de autorregulação e reconexão</div>
+        <div style="font-size:14px; line-height:1.7; color:#555555; text-align:left;">
+          <p style="margin-bottom:10px;">Como o corpo guarda o que a mente ainda não processou. O artigo conecta neurociência do trauma, teoria polivagal e visão sistêmica.</p>
+          <p style="margin-bottom:0;">É o tipo de leitura que muda a forma como você enxerga o seu corpo.</p>
         </div>
-        <a href="artigo-shaiane.html" class="article-cta">Leia o artigo →</a>
+        <a href="https://altislisboa.com.br/artigo-shaiane/" style="display:inline-block; margin-top:16px; font-size:13px; font-weight:700; color:#111111; letter-spacing:0.05em; border-bottom:2px solid #111111; padding-bottom:2px; text-transform:uppercase; text-decoration:none;">Leia o artigo →</a>
       </td>
     </tr>
   </table>
 
-  <div class="section-divider"></div>
+  <div style="height:1px; background:#f0f0f0; margin:0 40px;"></div>
 
   <!-- LIVRO -->
-  <div style="padding: 32px 40px 0;">
+  <div style="padding:32px 40px 0;">
     <div style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600; margin-bottom:20px;">📚 Mente · Biblioteca de indicações</div>
   </div>
 
   <!-- DUAS COLUNAS: texto + capa do livro -->
-  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; margin-bottom:36px;">
+  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; margin-bottom:36px; border-collapse:collapse;">
     <tr>
-      <td class="col-content" valign="top" width="348" style="width:348px; padding:28px 32px; background:#ffffff; vertical-align:top;">
-        <div class="book-title">Quando o corpo diz não</div>
-        <div class="book-author">Gabor Maté</div>
-        <div class="book-body">
-          <p>Gabor Maté é um médico canadense que passou décadas atendendo pacientes com doenças crônicas graves. E o que ele encontrou, repetidamente, foi algo que incomoda e liberta ao mesmo tempo: <strong>o corpo adoece onde a psique não foi ouvida.</strong></p>
-          <p>Com os dados que a carta de hoje trouxe, esse livro ganha uma urgência diferente. Cada afastamento tem uma história anterior, de um corpo ignorado por tempo demais.</p>
-          <p><em>Leia com essa pergunta: em que parte da minha vida eu aprendi que não era seguro sentir?</em></p>
+      <td class="col-td-content" valign="top" width="348" style="width:348px; padding:28px 32px; background:#ffffff; vertical-align:top;">
+        <div style="font-size:15px; font-weight:800; color:#111111; line-height:1.3; margin-bottom:6px;">Quando o corpo diz não</div>
+        <div style="font-size:12px; color:#999999; margin-bottom:12px; letter-spacing:0.04em; text-transform:uppercase;">Gabor Maté</div>
+        <div style="font-size:14px; line-height:1.65; color:#555555; text-align:left;">
+          <p style="margin-bottom:10px;">Gabor Maté é um médico canadense que passou décadas atendendo pacientes com doenças crônicas graves. E o que ele encontrou, repetidamente, foi algo que incomoda e liberta ao mesmo tempo: <strong style="font-weight:700;">o corpo adoece onde a psique não foi ouvida.</strong></p>
+          <p style="margin-bottom:10px;">Com os dados que a carta de hoje trouxe, esse livro ganha uma urgência diferente. Cada afastamento tem uma história anterior, de um corpo ignorado por tempo demais.</p>
+          <p style="margin-bottom:0;"><em style="font-style:italic; color:#333333;">Leia com essa pergunta: em que parte da minha vida eu aprendi que não era seguro sentir?</em></p>
         </div>
       </td>
-      <td class="col-image" valign="top" width="252" style="width:252px; background:#f7f7f7; vertical-align:top; padding:24px 16px;">
+      <td class="col-td" valign="top" width="252" style="width:252px; background:#f7f7f7; vertical-align:top; padding:24px 16px;">
         <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/livro-quando-o-corpo%20diz%20nao.jpg" alt="Quando o corpo diz não" width="220" style="display:block; width:100%; height:auto; border-radius:2px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
       </td>
     </tr>
   </table>
 
-  <div class="section-divider"></div>
+  <div style="height:1px; background:#f0f0f0; margin:0 40px;"></div>
 
   <!-- MÚSICA -->
-  <div class="music-section">
-    <div class="music-section-label">🎵 Corpo · Música para conectar com o corpo</div>
-
-    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/%F0%9F%8E%B5%20M%C3%BAsica%20para%20conectar%20com%20o%20corpo.png" alt="Música para conectar com o corpo" style="width:100%; margin:16px 0; border-radius:2px;">
-
-    <div class="music-body">
-      <p><em>A gente fala muito de saúde mental como se fosse um tema distante, institucional, quase técnico.</em> Mas antes de virar afastamento, diagnóstico ou norma, ela começa aqui: no corpo que vai silenciando aos poucos.</p>
-      <p>Na respiração que encurta.<br>Na tensão que você normalizou.<br>No cansaço que virou rotina.</p>
-      <p><em>Por isso, a música dessa semana não é para pensar. É para deixar o corpo lembrar que ele também precisa de caminho, pausa e presença.</em></p>
+  <div style="padding:28px 40px 36px; background:#f7f7f7;">
+    <div style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#aaaaaa; font-weight:600; margin-bottom:12px;">🎵 Corpo · Música para conectar com o corpo</div>
+    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/%F0%9F%8E%B5%20M%C3%BAsica%20para%20conectar%20com%20o%20corpo.png" alt="Música para conectar com o corpo" width="520" style="display:block; width:100%; height:auto; margin:16px 0; border-radius:2px;">
+    <div style="font-size:15px; line-height:1.7; color:#555555; text-align:left;">
+      <p style="margin-bottom:10px;"><em style="font-style:italic; color:#333333;">A gente fala muito de saúde mental como se fosse um tema distante, institucional, quase técnico.</em> Mas antes de virar afastamento, diagnóstico ou norma, ela começa aqui: no corpo que vai silenciando aos poucos.</p>
+      <p style="margin-bottom:10px;">Na respiração que encurta.<br>Na tensão que você normalizou.<br>No cansaço que virou rotina.</p>
+      <p style="margin-bottom:0;"><em style="font-style:italic; color:#333333;">Por isso, a música dessa semana não é para pensar. É para deixar o corpo lembrar que ele também precisa de caminho, pausa e presença.</em></p>
     </div>
-
-    <div class="music-track">
-      🎶 <a href="https://www.youtube.com/watch?v=-83HCIbrfWU" target="_blank">"Clube da Esquina nº 2", Milton Nascimento e Lo Borges</a>
+    <div style="margin-top:16px; padding:14px 18px; background:#ffffff; border-radius:2px; font-size:14px; font-weight:700; color:#111111;">
+      🎶 <a href="https://www.youtube.com/watch?v=-83HCIbrfWU" target="_blank" style="color:#111111; text-decoration:underline;">"Clube da Esquina nº 2", Milton Nascimento e Lo Borges</a>
     </div>
-
-    <div class="music-instructions">
-      <p>Coloca para tocar.</p>
-      <p>Para tudo por alguns minutos.</p>
-      <p>Fecha os olhos.</p>
+    <div style="margin-top:20px; font-family:'Special Elite','Courier New',Courier,monospace; font-size:15px; color:#666666; line-height:2; text-align:center;">
+      <p style="margin-bottom:0;">Coloca para tocar.</p>
+      <p style="margin-bottom:0;">Para tudo por alguns minutos.</p>
+      <p style="margin-bottom:0;">Fecha os olhos.</p>
     </div>
   </div>
 
   <!-- RODAPÉ -->
-  <div class="footer">
-    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/rodape.jpg" alt="Rodapé The Future Newsletter" width="600">
+  <div style="margin-top:8px;">
+    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/rodape.jpg" alt="Rodapé The Future Newsletter" width="600" style="display:block; width:100%; height:auto;">
   </div>
 
 </div>
