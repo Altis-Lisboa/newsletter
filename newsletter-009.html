@@ -12,445 +12,85 @@
   </style>
   <![endif]-->
   <style>
-    /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { margin: 0; padding: 0; background: #ffffff; }
     img { border: 0; display: block; max-width: 100%; height: auto; }
     a { color: inherit; text-decoration: none; }
 
-    /* Wrapper */
-    .email-wrapper {
-      width: 100%;
-      background: #ffffff;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
+    .email-wrapper { width: 100%; background: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .container { max-width: 600px; margin: 0 auto; background: #ffffff; }
 
-    /* Container */
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #ffffff;
-    }
-
-    /* Topo */
     .topo-desk { display: block; }
     .topo-mobile { display: none; }
 
-    /* Número e data */
-    .header-meta {
-      padding: 28px 40px 0;
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #999999;
-    }
+    .headline-block { padding: 20px 40px 28px; border-bottom: 1px solid #f0f0f0; }
+    .headline-block h1 { font-size: 28px; font-weight: 700; line-height: 1.2; color: #111111; letter-spacing: -0.02em; }
+    .headline-block .subhead { font-size: 15px; color: #555555; margin-top: 10px; line-height: 1.5; font-weight: 400; }
 
-    /* Título principal */
-    .headline-block {
-      padding: 20px 40px 28px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .headline-block .issue-label {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #aaaaaa;
-      margin-bottom: 10px;
-    }
-    .headline-block h1 {
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #111111;
-      letter-spacing: -0.02em;
-    }
-    .headline-block .subhead {
-      font-size: 15px;
-      color: #555555;
-      margin-top: 10px;
-      line-height: 1.5;
-      font-weight: 400;
-    }
+    .section-divider { height: 1px; background: #f0f0f0; margin: 0 40px; }
 
-    /* Divisor de seção */
-    .section-divider {
-      height: 1px;
-      background: #f0f0f0;
-      margin: 0 40px;
-    }
+    .section-label { padding: 32px 40px 4px; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #bbbbbb; font-weight: 600; }
+    .section-title { padding: 0 40px 20px; font-size: 20px; font-weight: 700; color: #111111; letter-spacing: -0.01em; }
 
-    /* Seção: Carta de Lisboa */
-    .section-label {
-      padding: 32px 40px 4px;
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #bbbbbb;
-      font-weight: 600;
-    }
-    .section-title {
-      padding: 0 40px 20px;
-      font-size: 20px;
-      font-weight: 700;
-      color: #111111;
-      letter-spacing: -0.01em;
-    }
+    .body-text { padding: 0 40px; font-size: 16px; line-height: 1.75; color: #333333; }
+    .body-text p { margin-bottom: 18px; }
+    .body-text strong { color: #111111; font-weight: 700; }
+    .body-text em { color: #444444; font-style: italic; }
 
-    /* Body text */
-    .body-text {
-      padding: 0 40px;
-      font-size: 16px;
-      line-height: 1.75;
-      color: #333333;
-    }
-    .body-text p {
-      margin-bottom: 18px;
-    }
-    .body-text strong {
-      color: #111111;
-      font-weight: 700;
-    }
-    .body-text em {
-      color: #444444;
-      font-style: italic;
-    }
+    .stat-block { margin: 28px 40px; padding: 24px 28px; background: #f7f7f7; border-left: 3px solid #111111; }
+    .stat-number { font-size: 42px; font-weight: 800; color: #111111; line-height: 1; letter-spacing: -0.03em; }
+    .stat-label { font-size: 13px; color: #666666; margin-top: 6px; line-height: 1.4; }
 
-    /* Estatística destacada */
-    .stat-block {
-      margin: 28px 40px;
-      padding: 24px 28px;
-      background: #f7f7f7;
-      border-left: 3px solid #111111;
-    }
-    .stat-number {
-      font-size: 42px;
-      font-weight: 800;
-      color: #111111;
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-    .stat-label {
-      font-size: 13px;
-      color: #666666;
-      margin-top: 6px;
-      line-height: 1.4;
-    }
+    .pull-quote { margin: 28px 40px; padding: 24px 28px; border-top: 2px solid #111111; border-bottom: 2px solid #111111; }
+    .pull-quote p { font-size: 18px; font-weight: 700; line-height: 1.45; color: #111111; letter-spacing: -0.01em; font-style: italic; }
 
-    /* Imagem inline */
-    .inline-image {
-      margin: 28px 0;
-    }
-    .inline-image img {
-      width: 100%;
-    }
+    .callout-box { margin: 28px 40px; padding: 24px 28px; background: #f7f7f7; border-radius: 2px; }
+    .callout-box p { font-size: 15px; line-height: 1.7; color: #333333; }
 
-    /* Quote / destaque editorial */
-    .pull-quote {
-      margin: 28px 40px;
-      padding: 24px 28px;
-      border-top: 2px solid #111111;
-      border-bottom: 2px solid #111111;
-    }
-    .pull-quote p {
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.45;
-      color: #111111;
-      letter-spacing: -0.01em;
-      font-style: italic;
-    }
+    .challenge-block { margin: 28px 40px; padding: 22px 26px; background: #111111; border-radius: 2px; }
+    .challenge-block p { font-size: 14px; line-height: 1.7; color: #ffffff; font-style: italic; }
+    .challenge-block strong { font-style: normal; font-weight: 700; }
 
-    /* Caixa de destaque (call-out) */
-    .callout-box {
-      margin: 28px 40px;
-      padding: 24px 28px;
-      background: #f7f7f7;
-      border-radius: 2px;
-    }
-    .callout-box p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #333333;
-    }
+    .signature { padding: 12px 40px 36px; font-size: 14px; color: #777777; font-style: italic; }
 
-    /* Desafio da semana */
-    .challenge-block {
-      margin: 28px 40px;
-      padding: 22px 26px;
-      background: #111111;
-      border-radius: 2px;
-    }
-    .challenge-block p {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #ffffff;
-      font-style: italic;
-    }
-    .challenge-block strong {
-      font-style: normal;
-      font-weight: 700;
-    }
+    .big-divider { height: 2px; background: #111111; margin: 8px 40px 0; }
 
-    /* Assinatura */
-    .signature {
-      padding: 12px 40px 36px;
-      font-size: 14px;
-      color: #777777;
-      font-style: italic;
-    }
+    .nr1-section { padding: 32px 40px 36px; background: #ffffff; }
+    .nr1-title { font-size: 20px; font-weight: 800; color: #111111; margin-bottom: 14px; letter-spacing: -0.01em; }
+    .nr1-body { font-size: 15px; line-height: 1.7; color: #444444; }
+    .nr1-body p { margin-bottom: 14px; }
+    .nr1-body em { font-style: italic; color: #222222; font-weight: 600; }
+    .nr1-cta { display: inline-block; margin-top: 10px; padding: 14px 28px; background: #111111; color: #ffffff !important; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; text-decoration: none; }
 
-    /* Separador de coluna */
-    .big-divider {
-      height: 2px;
-      background: #111111;
-      margin: 8px 40px 0;
-    }
+    .article-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #aaaaaa; margin-bottom: 8px; }
+    .article-title { font-size: 17px; font-weight: 700; color: #111111; line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em; }
+    .article-body { font-size: 14px; line-height: 1.7; color: #555555; }
+    .article-body p { margin-bottom: 10px; }
+    .article-cta { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 700; color: #111111; letter-spacing: 0.05em; border-bottom: 2px solid #111111; padding-bottom: 2px; text-transform: uppercase; }
 
-    /* Seção NR-1 */
-    .nr1-section {
-      padding: 32px 40px 36px;
-      background: #ffffff;
-    }
-    .nr1-logo {
-      margin-bottom: 20px;
-    }
-    .nr1-logo img {
-      height: 40px;
-      width: auto;
-    }
-    .nr1-title {
-      font-size: 20px;
-      font-weight: 800;
-      color: #111111;
-      margin-bottom: 14px;
-      letter-spacing: -0.01em;
-    }
-    .nr1-body {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #444444;
-    }
-    .nr1-body p {
-      margin-bottom: 14px;
-    }
-    .nr1-body em {
-      font-style: italic;
-      color: #222222;
-      font-weight: 600;
-    }
-    .nr1-cta {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 14px 28px;
-      background: #111111;
-      color: #ffffff !important;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      text-decoration: none;
-    }
+    .book-title { font-size: 15px; font-weight: 800; color: #111111; line-height: 1.3; margin-bottom: 6px; }
+    .book-author { font-size: 12px; color: #999999; margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .book-body { font-size: 14px; line-height: 1.65; color: #555555; }
+    .book-body p { margin-bottom: 10px; }
+    .book-body em { font-style: italic; color: #333333; }
 
-    /* Layout dois colunas */
-    .two-col-section {
-      display: flex;
-      gap: 0;
-      align-items: stretch;
-      margin: 0 0 0 0;
-    }
-    .two-col-reverse {
-      flex-direction: row-reverse;
-    }
-    .two-col-image {
-      flex: 0 0 42%;
-      overflow: hidden;
-    }
-    .two-col-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .two-col-image--book img {
-      object-fit: contain;
-      object-position: center top;
-      background: #f7f7f7;
-      padding: 24px 16px;
-    }
-    .two-col-content {
-      flex: 1;
-      padding: 28px 32px;
-      background: #f7f7f7;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .two-col-content--book {
-      background: #ffffff;
-      padding: 28px 32px;
-    }
-
-    /* Artigo das alunas */
-    .article-section {
-      margin: 0 40px 36px;
-      padding: 24px 26px;
-      background: #f7f7f7;
-      border-radius: 2px;
-    }
-    .article-section img {
-      width: 100%;
-      margin-bottom: 16px;
-      border-radius: 2px;
-    }
-    .article-label {
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #aaaaaa;
-      margin-bottom: 8px;
-    }
-    .article-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: #111111;
-      line-height: 1.35;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-    .article-body {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #555555;
-    }
-    .article-cta {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #111111;
-      letter-spacing: 0.05em;
-      border-bottom: 2px solid #111111;
-      padding-bottom: 2px;
-      text-transform: uppercase;
-    }
-
-    /* Livro */
-    .book-section {
-      padding: 0 40px 36px;
-    }
-    .book-section .section-label-inline {
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #bbbbbb;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-    .book-row {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-    .book-cover {
-      flex: 0 0 110px;
-    }
-    .book-cover img {
-      width: 110px;
-      border-radius: 2px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    }
-    .book-content {
-      flex: 1;
-    }
-    .book-title {
-      font-size: 15px;
-      font-weight: 800;
-      color: #111111;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-    .book-author {
-      font-size: 12px;
-      color: #999999;
-      margin-bottom: 12px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .book-body {
-      font-size: 14px;
-      line-height: 1.65;
-      color: #555555;
-    }
-    .book-body em {
-      font-style: italic;
-      color: #333333;
-    }
-
-    /* Música */
-    .music-section {
-      padding: 28px 40px 36px;
-      background: #f7f7f7;
-      margin: 0 0 0 0;
-    }
-    .music-section .section-label-inline {
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #aaaaaa;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .music-section img {
-      width: 100%;
-      margin: 16px 0;
-      border-radius: 2px;
-    }
-    .music-body {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #555555;
-    }
+    .music-section { padding: 28px 40px 36px; background: #f7f7f7; }
+    .music-section-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #aaaaaa; font-weight: 600; margin-bottom: 12px; }
+    .music-body { font-size: 15px; line-height: 1.7; color: #555555; }
     .music-body p { margin-bottom: 10px; }
     .music-body em { font-style: italic; color: #333333; }
-    .music-track {
-      margin-top: 16px;
-      padding: 14px 18px;
-      background: #ffffff;
-      border-radius: 2px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #111111;
-    }
-    .music-track a {
-      color: #111111;
-      text-decoration: underline;
-    }
-    .music-instructions {
-      margin-top: 20px;
-      font-family: 'Special Elite', 'Courier New', Courier, monospace;
-      font-size: 15px;
-      font-style: normal;
-      color: #666666;
-      line-height: 2;
-      text-align: center;
-    }
+    .music-track { margin-top: 16px; padding: 14px 18px; background: #ffffff; border-radius: 2px; font-size: 14px; font-weight: 700; color: #111111; }
+    .music-track a { color: #111111; text-decoration: underline; }
+    .music-instructions { margin-top: 20px; font-family: 'Special Elite', 'Courier New', Courier, monospace; font-size: 15px; color: #666666; line-height: 2; text-align: center; }
     .music-instructions p { margin-bottom: 0; }
 
-    /* Rodapé */
-    .footer {
-      margin-top: 8px;
-    }
-    .footer img {
-      width: 100%;
-    }
+    .footer { margin-top: 8px; }
+    .footer img { width: 100%; }
 
-    /* ─── MOBILE ─── */
     @media only screen and (max-width: 600px) {
       .topo-desk { display: none !important; }
       .topo-mobile { display: block !important; }
 
-      .header-meta { padding: 20px 24px 0; }
       .headline-block { padding: 16px 24px 22px; }
       .headline-block h1 { font-size: 22px; }
       .headline-block .subhead { font-size: 14px; }
@@ -473,19 +113,11 @@
       .big-divider { margin: 8px 24px 0; }
 
       .nr1-section { padding: 24px 24px 28px; }
-      .article-section { margin: 0 24px 28px; }
 
-      .book-section { padding: 0 24px 28px; }
-      .book-row { flex-direction: column; gap: 16px; }
-      .book-cover { flex: none; }
-      .book-cover img { width: 90px; }
-
-      .two-col-section { flex-direction: column !important; }
-      .two-col-image { flex: none; height: 260px; }
-      .two-col-content { padding: 22px 24px !important; }
-      .two-col-reverse .two-col-content { padding: 22px 24px !important; }
-      .two-col-image--book { height: auto; }
-      .two-col-image--book img { height: auto; padding: 16px; }
+      /* duas colunas → empilha no mobile */
+      .col-table { width: 100% !important; }
+      .col-image td { display: block !important; width: 100% !important; }
+      .col-content td { display: block !important; width: 100% !important; padding: 22px 24px !important; }
 
       .music-section { padding: 22px 24px 28px; }
     }
@@ -509,9 +141,7 @@
     <p class="subhead">O mercado precisa de profissionais preparados para isso.</p>
   </div>
 
-  <!-- ══════════════════════════════ -->
-  <!-- SEÇÃO: CARTAS DE LISBOA       -->
-  <!-- ══════════════════════════════ -->
+  <!-- CARTAS DE LISBOA -->
   <div class="section-label">🪶 Cartas de Lisboa</div>
   <div class="section-title">O mundo está adoecendo.</div>
 
@@ -547,17 +177,19 @@
     <p><strong>Mas eu não quero ficar só nos números. Quero te falar sobre o que eles revelam.</strong></p>
   </div>
 
-  <!-- DOIS COLUNAS: texto + imagem -->
-  <div class="two-col-section" style="margin: 28px 0;">
-    <div class="two-col-content" style="background:#ffffff; padding: 0 32px 0 40px; justify-content: flex-start;">
-      <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px;">Esses 534 mil afastamentos não são estatística. São 534 mil histórias de pessoas que chegaram num ponto em que o corpo disse não, antes que a mente tivesse permissão para dizer.</p>
-      <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px;">Pessoas que provavelmente passaram meses, talvez anos, funcionando no limite. Entregando resultado, respondendo e-mail, aparecendo nas reuniões. Mas por dentro, algo estava se fragmentando silenciosamente.</p>
-      <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:0;">E isso acontece porque ainda vivemos dentro de uma cultura que confunde produção com valor. Que ensina que pedir ajuda é fraqueza. Que transforma o esgotamento em medalha.</p>
-    </div>
-    <div class="two-col-image">
-      <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/como%20o%20corpo%20guarda%20o%20que%20a%20mente%20ainda%20n%C3%A3o%20processou..jpg" alt="Como o corpo guarda o que a mente ainda não processou">
-    </div>
-  </div>
+  <!-- DUAS COLUNAS: texto + imagem neurônio -->
+  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; margin:28px 0;">
+    <tr>
+      <td class="col-content" valign="top" width="330" style="width:330px; padding:28px 32px 28px 40px; background:#ffffff; vertical-align:top;">
+        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px;">Esses 534 mil afastamentos não são estatística. São 534 mil histórias de pessoas que chegaram num ponto em que o corpo disse não, antes que a mente tivesse permissão para dizer.</p>
+        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:18px;">Pessoas que provavelmente passaram meses, talvez anos, funcionando no limite. Entregando resultado, respondendo e-mail, aparecendo nas reuniões. Mas por dentro, algo estava se fragmentando silenciosamente.</p>
+        <p style="font-size:16px; line-height:1.75; color:#333333; margin-bottom:0;">E isso acontece porque ainda vivemos dentro de uma cultura que confunde produção com valor. Que ensina que pedir ajuda é fraqueza. Que transforma o esgotamento em medalha.</p>
+      </td>
+      <td class="col-image" valign="top" width="270" style="width:270px; vertical-align:top;">
+        <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/como%20o%20corpo%20guarda%20o%20que%20a%20mente%20ainda%20n%C3%A3o%20processou..jpg" alt="Como o corpo guarda o que a mente ainda não processou" width="270" style="display:block; width:100%; height:auto;">
+      </td>
+    </tr>
+  </table>
 
   <!-- PULL QUOTE -->
   <div class="pull-quote">
@@ -593,13 +225,11 @@
 
   <div class="big-divider"></div>
 
-  <!-- ══════════════════════════════ -->
-  <!-- SEÇÃO: MULTIVERSO ALTIS — NR-1-->
-  <!-- ══════════════════════════════ -->
+  <!-- MULTIVERSO ALTIS — NR-1 -->
   <div class="nr1-section">
     <div class="section-label" style="padding: 0 0 16px; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600;">✧ Multiverso Altis</div>
 
-    <div class="nr1-logo" style="text-align:center; padding: 16px 0 24px;">
+    <div style="text-align:center; padding: 16px 0 24px;">
       <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/logo-nr1.svg" alt="NR-1 Altis" style="height:120px; width:auto; display:inline-block;">
     </div>
 
@@ -616,41 +246,40 @@
 
   <div class="section-divider"></div>
 
-  <!-- ══════════════════════════════ -->
-  <!-- ARTIGO: CORPO COMO PORTAL     -->
-  <!-- ══════════════════════════════ -->
+  <!-- ARTIGO DA SEMANA -->
   <div style="padding: 32px 0 0;">
     <div class="section-label">✍️ Artigo da Semana</div>
   </div>
 
-  <div class="two-col-section">
-    <!-- Foto Shaiane -->
-    <div class="two-col-image">
-      <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/shaiane.jpg" alt="Shaiane Porto">
-    </div>
-    <!-- Texto -->
-    <div class="two-col-content">
-      <div class="article-label">Por Shaiane Porto · Aluna Altis Lisboa</div>
-      <div class="article-title">Do trauma à fluidez: o corpo como portal de autorregulação e reconexão</div>
-      <div class="article-body">
-        <p>Como o corpo guarda o que a mente ainda não processou. O artigo conecta neurociência do trauma, teoria polivagal e visão sistêmica.</p>
-        <p>É o tipo de leitura que muda a forma como você enxerga o seu corpo.</p>
-      </div>
-      <a href="artigo-shaiane.html" class="article-cta">Leia o artigo →</a>
-    </div>
-  </div>
+  <!-- DUAS COLUNAS: foto Shaiane + texto -->
+  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;">
+    <tr>
+      <td class="col-image" valign="top" width="252" style="width:252px; vertical-align:top;">
+        <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/shaiane.jpg" alt="Shaiane Porto" width="252" style="display:block; width:100%; height:auto;">
+      </td>
+      <td class="col-content" valign="middle" width="348" style="width:348px; padding:28px 32px; background:#f7f7f7; vertical-align:middle;">
+        <div class="article-label">Por Shaiane Porto · Aluna Altis Lisboa</div>
+        <div class="article-title">Do trauma à fluidez: o corpo como portal de autorregulação e reconexão</div>
+        <div class="article-body">
+          <p>Como o corpo guarda o que a mente ainda não processou. O artigo conecta neurociência do trauma, teoria polivagal e visão sistêmica.</p>
+          <p>É o tipo de leitura que muda a forma como você enxerga o seu corpo.</p>
+        </div>
+        <a href="artigo-shaiane.html" class="article-cta">Leia o artigo →</a>
+      </td>
+    </tr>
+  </table>
 
   <div class="section-divider"></div>
 
-  <!-- ══════════════════════════════ -->
-  <!-- SEÇÃO: LIVRO                  -->
-  <!-- ══════════════════════════════ -->
-  <div class="book-section" style="padding-top: 32px;">
-    <div class="section-label-inline" style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600; margin-bottom:20px;">📚 Mente · Biblioteca de indicações</div>
+  <!-- LIVRO -->
+  <div style="padding: 32px 40px 0;">
+    <div style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#bbbbbb; font-weight:600; margin-bottom:20px;">📚 Mente · Biblioteca de indicações</div>
+  </div>
 
-    <!-- Texto à esquerda, capa à direita -->
-    <div class="two-col-section" style="margin: 0 -24px;">
-      <div class="two-col-content two-col-content--book">
+  <!-- DUAS COLUNAS: texto + capa do livro -->
+  <table class="col-table" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; margin-bottom:36px;">
+    <tr>
+      <td class="col-content" valign="top" width="348" style="width:348px; padding:28px 32px; background:#ffffff; vertical-align:top;">
         <div class="book-title">Quando o corpo diz não</div>
         <div class="book-author">Gabor Maté</div>
         <div class="book-body">
@@ -658,22 +287,20 @@
           <p>Com os dados que a carta de hoje trouxe, esse livro ganha uma urgência diferente. Cada afastamento tem uma história anterior, de um corpo ignorado por tempo demais.</p>
           <p><em>Leia com essa pergunta: em que parte da minha vida eu aprendi que não era seguro sentir?</em></p>
         </div>
-      </div>
-      <div class="two-col-image two-col-image--book">
-        <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/livro-quando-o-corpo%20diz%20nao.jpg" alt="Quando o corpo diz não">
-      </div>
-    </div>
-  </div>
+      </td>
+      <td class="col-image" valign="top" width="252" style="width:252px; background:#f7f7f7; vertical-align:top; padding:24px 16px;">
+        <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/livro-quando-o-corpo%20diz%20nao.jpg" alt="Quando o corpo diz não" width="220" style="display:block; width:100%; height:auto; border-radius:2px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+      </td>
+    </tr>
+  </table>
 
   <div class="section-divider"></div>
 
-  <!-- ══════════════════════════════ -->
-  <!-- SEÇÃO: MÚSICA                 -->
-  <!-- ══════════════════════════════ -->
+  <!-- MÚSICA -->
   <div class="music-section">
-    <div class="section-label-inline">🎵 Corpo · Música para conectar com o corpo</div>
+    <div class="music-section-label">🎵 Corpo · Música para conectar com o corpo</div>
 
-    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/%F0%9F%8E%B5%20M%C3%BAsica%20para%20conectar%20com%20o%20corpo.png" alt="Música para conectar com o corpo">
+    <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/%F0%9F%8E%B5%20M%C3%BAsica%20para%20conectar%20com%20o%20corpo.png" alt="Música para conectar com o corpo" style="width:100%; margin:16px 0; border-radius:2px;">
 
     <div class="music-body">
       <p><em>A gente fala muito de saúde mental como se fosse um tema distante, institucional, quase técnico.</em> Mas antes de virar afastamento, diagnóstico ou norma, ela começa aqui: no corpo que vai silenciando aos poucos.</p>
@@ -692,14 +319,12 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════ -->
-  <!-- RODAPÉ                        -->
-  <!-- ══════════════════════════════ -->
+  <!-- RODAPÉ -->
   <div class="footer">
     <img src="https://raw.githubusercontent.com/Altis-Lisboa/newsletter/main/imagens/ROD%C3%81P%C3%89.jpg" alt="Rodapé The Future Newsletter" width="600">
   </div>
 
-</div><!-- /container -->
-</div><!-- /email-wrapper -->
+</div>
+</div>
 </body>
 </html>
